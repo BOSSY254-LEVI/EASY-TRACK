@@ -142,4 +142,132 @@
     background: rgba(26, 42, 42, 0.25);
     border: 1px solid rgba(255, 255, 255, 0.08);
   }
+
+  /* Enhanced Theme Styles */
+  .theme-ocean {
+    --background: #0F1419;
+    --foreground: #F1F5F9;
+    --card: #1E293B;
+    --card-foreground: #F1F5F9;
+    --primary: #1E3A8A;
+    --primary-foreground: #F1F5F9;
+    --secondary: #3B82F6;
+    --secondary-foreground: #0F1419;
+  }
+
+  .theme-sunset {
+    --background: #1C1917;
+    --foreground: #F5F5F4;
+    --card: #292524;
+    --card-foreground: #F5F5F4;
+    --primary: #EA580C;
+    --primary-foreground: #1C1917;
+    --secondary: #F97316;
+    --secondary-foreground: #1C1917;
+  }
+
+  .theme-forest {
+    --background: #0F172A;
+    --foreground: #F1F5F9;
+    --card: #1E293B;
+    --card-foreground: #F1F5F9;
+    --primary: #166534;
+    --primary-foreground: #F1F5F9;
+    --secondary: #22C55E;
+    --secondary-foreground: #0F172A;
+  }
+
+  .theme-purple {
+    --background: #1A1625;
+    --foreground: #F3F4F6;
+    --card: #2D1B69;
+    --card-foreground: #F3F4F6;
+    --primary: #7C3AED;
+    --primary-foreground: #F3F4F6;
+    --secondary: #A855F7;
+    --secondary-foreground: #1A1625;
+  }
+
+  .theme-rose {
+    --background: #1F0F1F;
+    --foreground: #F9FAFB;
+    --card: #4C1D4C;
+    --card-foreground: #F9FAFB;
+    --primary: #BE185D;
+    --primary-foreground: #F9FAFB;
+    --secondary: #EC4899;
+    --secondary-foreground: #1F0F1F;
+  }
+
+  .theme-slate {
+    --background: #0F172A;
+    --foreground: #F8FAFC;
+    --card: #1E293B;
+    --card-foreground: #F8FAFC;
+    --primary: #334155;
+    --primary-foreground: #F8FAFC;
+    --secondary: #64748B;
+    --secondary-foreground: #0F172A;
+  }
+
+  /* Animation Classes */
+  .animate-fade-in {
+    animation: fadeIn 0.5s ease-in-out;
+  }
+
+  .animate-slide-up {
+    animation: slideUp 0.3s ease-out;
+  }
+
+  .animate-bounce-gentle {
+    animation: bounceGentle 2s infinite;
+  }
+
+  .animate-pulse-slow {
+    animation: pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  }
+
+  .animate-shimmer {
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.1), transparent);
+    background-size: 200% 100%;
+    animation: shimmer 2s linear infinite;
+  }
+
+  /* Enhanced Glassmorphism */
+  .glass-card {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  }
+
+  .dark .glass-card {
+    background: rgba(0, 0, 0, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  /* Gradient Backgrounds */
+  .gradient-ocean {
+    background: linear-gradient(135deg, #1E3A8A 0%, #3B82F6 100%);
+  }
+
+  .gradient-sunset {
+    background: linear-gradient(135deg, #EA580C 0%, #F97316 100%);
+  }
+
+  .gradient-forest {
+    background: linear-gradient(135deg, #166534 0%, #22C55E 100%);
+  }
+
+  .gradient-purple {
+    background: linear-gradient(135deg, #7C3AED 0%, #A855F7 100%);
+  }
+
+  .gradient-rose {
+    background: linear-gradient(135deg, #BE185D 0%, #EC4899 100%);
+  }
+
+  .gradient-slate {
+    background: linear-gradient(135deg, #334155 0%, #64748B 100%);
+  }
 }

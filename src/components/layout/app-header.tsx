@@ -4,10 +4,11 @@ import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
 import { Badge } from "@/components/ui/badge"
-import { 
-  Search, 
-  Bell, 
-  Settings, 
+import { ThemeSwitcher } from "@/components/ui/theme-switcher"
+import {
+  Search,
+  Bell,
+  Settings,
   Moon,
   Sun,
   Wifi,
@@ -145,19 +146,22 @@ export function AppHeader() {
           </Badge>
         </Button>
 
-        {/* Theme Toggle */}
-        <Button
-          variant="ghost"
-          size="sm"
-          onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
-          className="h-8 w-8 p-0"
-        >
-          {theme === "dark" ? (
-            <Sun className="h-4 w-4" />
-          ) : (
-            <Moon className="h-4 w-4" />
-          )}
-        </Button>
+        {/* Theme Controls */}
+        <div className="flex items-center gap-2">
+          <ThemeSwitcher />
+          <Button
+            variant="ghost"
+            size="sm"
+            onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
+            className="h-8 w-8 p-0"
+          >
+            {theme === "dark" ? (
+              <Sun className="h-4 w-4" />
+            ) : (
+              <Moon className="h-4 w-4" />
+            )}
+          </Button>
+        </div>
 
         {/* User Menu */}
         <Button variant="ghost" size="sm" className="p-1 h-8 w-8">

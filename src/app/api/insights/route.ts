@@ -1,41 +1,41 @@
 import { NextRequest, NextResponse } from 'next/server'
-import ZAI from 'z-ai-web-dev-sdk'
 
 export async function GET() {
   try {
-    const zai = await ZAI.create()
+    // Mock insights for the Easy Track dashboard
+    const insights = `
+## 🚨 Water Quality Alert
+**Location: Rural Kenya - Nakuru County**
+- Recent water samples show elevated E. coli levels (150 CFU/100ml) exceeding WHO standards
+- Affected communities: 3 villages, ~2,500 residents
+- **Action Required:** Deploy emergency water purification units within 48 hours
 
-    // Generate AI insights for the dashboard
-    const completion = await zai.chat.completions.create({
-      messages: [
-        {
-          role: 'system',
-          content: 'You are an AI assistant for a field data management system called Easy Track. Generate realistic insights about water quality, health surveys, and climate data in African regions.'
-        },
-        {
-          role: 'user',
-          content: 'Generate 3 brief, actionable insights for a field operations dashboard. Include warnings about water quality, success stories about vaccination campaigns, and information about climate data patterns. Make them specific and realistic.'
-        }
-      ],
-      temperature: 0.7,
-      max_tokens: 500,
-    })
+## 💉 Vaccination Success Story
+**Location: Urban Tanzania - Dar es Salaam**
+- Polio vaccination campaign completed with 94.2% coverage rate
+- Vaccinated 45,230 children under 5 years old
+- Zero adverse events reported, demonstrating effective community engagement
 
-    const insights = completion.choices[0]?.message?.content || 'No insights available at this time.'
+## 🌡️ Climate Data Pattern
+**Location: West Africa - Senegal Region**
+- Seasonal rainfall patterns show 15% increase compared to last year
+- Malaria transmission risk elevated in coastal areas
+- **Recommendation:** Increase vector control measures and community awareness programs
+    `.trim()
 
-    return NextResponse.json({ 
-      success: true, 
+    return NextResponse.json({
+      success: true,
       insights,
       timestamp: new Date().toISOString()
     })
 
   } catch (error: any) {
-    console.error('AI Insights generation failed:', error.message)
+    console.error('Insights generation failed:', error.message)
     return NextResponse.json(
-      { 
-        success: false, 
+      {
+        success: false,
         error: 'Failed to generate insights',
-        message: error.message 
+        message: error.message
       },
       { status: 500 }
     )
