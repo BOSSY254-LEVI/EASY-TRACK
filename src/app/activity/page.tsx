@@ -1,5 +1,5 @@
 "use client"
-
+import { cn } from "@/lib/utils"
 import { AppLayout } from "@/components/layout/app-layout"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"

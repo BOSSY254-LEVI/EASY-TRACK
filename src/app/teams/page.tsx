@@ -91,6 +91,7 @@ const initialTeamMembers: TeamMember[] = [
     role: "Team Lead",
     phone: "+254 712 345 678",
     joinDate: "2023-01-15",
+    avatar: "/sarah.jpg",
     status: "active"
   },
   {
@@ -100,6 +101,7 @@ const initialTeamMembers: TeamMember[] = [
     role: "Field Agent",
     phone: "+254 723 456 789",
     joinDate: "2023-02-20",
+    avatar: "/mike.jpg",
     status: "active"
   },
   {
@@ -109,6 +111,7 @@ const initialTeamMembers: TeamMember[] = [
     role: "Data Analyst",
     phone: "+254 734 567 890",
     joinDate: "2023-03-10",
+    avatar: "/emma.jpg",
     status: "active"
   },
   {
@@ -118,6 +121,7 @@ const initialTeamMembers: TeamMember[] = [
     role: "Field Agent",
     phone: "+254 745 678 901",
     joinDate: "2023-04-05",
+    avatar: "/alex.jpg",
     status: "active"
   },
   {
@@ -127,6 +131,7 @@ const initialTeamMembers: TeamMember[] = [
     role: "Coordinator",
     phone: "+254 756 789 012",
     joinDate: "2023-05-12",
+    avatar: "/lisa.jpg",
     status: "active"
   },
   {
@@ -136,6 +141,7 @@ const initialTeamMembers: TeamMember[] = [
     role: "Research Lead",
     phone: "+254 767 890 123",
     joinDate: "2023-06-18",
+    avatar: "/john.jpg",
     status: "active"
   }
 ]
