@@ -1,9 +1,15 @@
-@import "tailwindcss";
-@import "tw-animate-css";
+/* 1️⃣ Import Google Fonts FIRST */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@500;600;700&display=swap');
 
+/* 2️⃣ Import Tailwind & animation layers */
+@import "tailwindcss";
+@import "tw-animate-css";
+
+
+/* 3️⃣ Optional Tailwind Variant API (safe to remove if unused) */
 @custom-variant dark (&:is(.dark *));
 
+/* 4️⃣ Theme Variables (for color mapping) */
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
@@ -44,6 +50,7 @@
   --radius-xl: calc(var(--radius) + 4px);
 }
 
+/* 5️⃣ Root Theme (Light Mode) */
 :root {
   --radius: 0.625rem;
   --background: #F8FBFB;
@@ -79,6 +86,7 @@
   --sidebar-ring: #0F5959;
 }
 
+/* 6️⃣ Dark Theme */
 .dark {
   --background: #0F1F1F;
   --foreground: #F8FBFB;
@@ -113,26 +121,30 @@
   --sidebar-ring: #2A9D8F;
 }
 
+/* 7️⃣ Base Styles */
 @layer base {
   * {
     @apply border-border outline-ring/50;
   }
   body {
-    @apply bg-background text-foreground;
-    font-family: 'Inter', sans-serif;
+    @apply bg-background text-foreground font-sans;
   }
   h1, h2 {
     font-family: 'Poppins', sans-serif;
   }
 }
 
+/* 8️⃣ Utility Styles */
 @layer utilities {
+  /* Neumorphism */
   .neumorphic {
     box-shadow: 8px 8px 16px rgba(15, 89, 89, 0.1), -8px -8px 16px rgba(255, 255, 255, 0.8);
   }
   .neumorphic-inset {
     box-shadow: inset 8px 8px 16px rgba(15, 89, 89, 0.1), inset -8px -8px 16px rgba(255, 255, 255, 0.8);
   }
+
+  /* Glassmorphism */
   .glassmorphism {
     background: rgba(255, 255, 255, 0.25);
     backdrop-filter: blur(10px);
@@ -143,7 +155,7 @@
     border: 1px solid rgba(255, 255, 255, 0.08);
   }
 
-  /* Enhanced Theme Styles */
+  /* Theme Variants */
   .theme-ocean {
     --background: #0F1419;
     --foreground: #F1F5F9;
@@ -210,7 +222,7 @@
     --secondary-foreground: #0F172A;
   }
 
-  /* Animation Classes */
+  /* Animations */
   .animate-fade-in {
     animation: fadeIn 0.5s ease-in-out;
   }
@@ -233,7 +245,7 @@
     animation: shimmer 2s linear infinite;
   }
 
-  /* Enhanced Glassmorphism */
+  /* Enhanced Glass Cards */
   .glass-card {
     background: rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(20px);
@@ -266,7 +278,7 @@
   .gradient-rose {
     background: linear-gradient(135deg, #BE185D 0%, #EC4899 100%);
   }
-
+  
   .gradient-slate {
     background: linear-gradient(135deg, #334155 0%, #64748B 100%);
   }
